@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "koa-data-validation",
+  "alias": "koa-data-validation.now.sh",
+  "builds": [{ "src": "api/*/index.js", "use": "@now/node" }],
+  "routes": [
+    { "src": "/api/joi", "methods": ["POST"], "dest": "/api/joi/index.js" },
+    { "src": "/api/yup", "methods": ["POST"], "dest": "/api/yup/index.js" },
+    { "src": "/", "status": 404},
+    { "src": "/api", "status": 404}
+  ]
+}
